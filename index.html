@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Da clip grezza a video professionale · il corso CapCut di Mickel</title>
+<meta name="description" content="Il corso CapCut di Mickel Buratin: impari a montare da telefono o da PC video che la gente guarda fino alla fine. Dentro Unlike Academy">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* BOZZA del 7/10/2026 · colori di Mickel: nero, fucsia, Tiffany, viola */
+:root{
+  --nero:#0D0C10; --nero2:#16141B; --nero3:#211E28;
+  --fucsia:#E6148C; --viola:#7B3FF2; --tiffany:#4FD1C5;
+  --bianco:#F7F5F8; --grigio:#B9B4C2; --grigio2:#8C8796;
+  --r:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--nero);color:var(--bianco);font-family:Inter,system-ui,sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.display{font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.005em;line-height:.95;font-weight:400}
+.fucsia{color:var(--fucsia)} .tiffany{color:var(--tiffany)} .viola{color:var(--viola)}
+.kicker{display:inline-block;font-weight:800;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--tiffany)}
+section{padding:88px 0}
+h2{font-size:clamp(40px,6vw,72px);margin:12px 0 18px}
+p.lead{font-size:20px;color:var(--grigio);max-width:720px}
+
+/* bozza */
+.bozza{position:sticky;top:0;z-index:50;background:repeating-linear-gradient(45deg,#2a2232 0 12px,#221c29 12px 24px);color:#fff;text-align:center;font-size:13px;font-weight:700;letter-spacing:.06em;padding:7px 10px}
+.bozza b{color:var(--tiffany)}
+
+/* banner del bonus di lancio */
+.bonusbar{background:linear-gradient(90deg,var(--viola),var(--fucsia));text-align:center;font-weight:700;font-size:16px;padding:12px 16px}
+.bonusbar a{font-weight:800}
+
+/* bottoni */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:800;font-size:17px;border-radius:999px;padding:17px 30px;transition:transform .15s ease, box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.primario{background:var(--fucsia);color:#fff;box-shadow:0 14px 34px -12px rgba(230,20,140,.7)}
+.btn.secondario{background:transparent;color:var(--bianco);border:2px solid var(--tiffany)}
+.btn.manca::after{content:"link da collegare";font-size:11px;font-weight:700;background:#fff;color:var(--nero);border-radius:999px;padding:3px 8px;margin-left:4px}
+
+/* segnaposto dichiarato: cosa deve mandare Mickel */
+.slot{border:2px dashed #5b5566;border-radius:var(--r);background:rgba(255,255,255,.03);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px;color:var(--grigio2);min-height:180px}
+.slot b{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tiffany);margin-bottom:8px}
+.slot span{font-size:15px;max-width:420px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:72px 0 80px}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:720px;height:720px;background:radial-gradient(circle,rgba(123,63,242,.55),transparent 62%);filter:blur(10px)}
+.hero::after{content:"";position:absolute;left:-200px;bottom:-260px;width:620px;height:620px;background:radial-gradient(circle,rgba(230,20,140,.38),transparent 65%)}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(54px,8.4vw,112px);margin:14px 0 20px}
+.hero h1 .riga2{display:block;background:linear-gradient(90deg,var(--fucsia),var(--viola));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{color:#D8D3DF}
+.cta-riga{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.numeri{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:30px;color:var(--grigio);font-size:15px;font-weight:600}
+.numeri b{color:var(--bianco);font-size:20px;margin-right:4px}
+.hero-vis{position:relative;min-height:520px}
+.tel{position:absolute;right:30px;top:0;width:260px;height:520px;border-radius:44px;background:#000;padding:10px;box-shadow:0 30px 70px -20px rgba(123,63,242,.6),0 0 0 2px #2a2733;transform:rotate(4deg)}
+.tel img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:36px;display:block}
+.polaroid{position:absolute;left:0;bottom:10px;width:210px;background:#fff;padding:10px 10px 0;transform:rotate(-6deg);box-shadow:0 24px 40px -16px rgba(0,0,0,.7)}
+.polaroid img{width:100%;height:250px;object-fit:cover;display:block}
+.polaroid b{display:block;color:var(--nero);font-weight:800;font-size:20px;padding:8px 2px 2px}
+.polaroid span{display:block;color:#7b7684;font-size:13px;font-weight:600;padding:0 2px 12px}
+.adesivo{position:absolute;right:0;top:-14px;background:var(--tiffany);color:var(--nero);font-weight:800;font-size:15px;border-radius:14px;padding:10px 14px;transform:rotate(-5deg);z-index:3;box-shadow:0 14px 26px -12px rgba(0,0,0,.6)}
+
+/* video */
+.video-trailer{margin-top:10px}
+.video-trailer .slot{min-height:380px;aspect-ratio:16/9}
+
+/* problemi */
+.griglia{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
+.card{background:var(--nero2);border:1px solid #26222e;border-radius:var(--r);padding:26px 24px}
+.card .n{font-family:Anton,sans-serif;font-size:40px;line-height:1;color:var(--fucsia)}
+.card h3{font-size:19px;margin:12px 0 8px;line-height:1.25}
+.card p{margin:0;color:var(--grigio);font-size:16px}
+
+/* chi è */
+.chi .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.foto-mickel{border-radius:28px;overflow:hidden;position:relative;aspect-ratio:3/4;background:var(--nero3)}
+.foto-mickel img{width:100%;height:100%;object-fit:cover;display:block}
+.foto-mickel .nota{position:absolute;left:12px;bottom:12px;right:12px;background:rgba(13,12,16,.82);border:1px dashed #6b6577;border-radius:12px;font-size:12px;color:var(--grigio);padding:8px 10px}
+.prove{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.prova{background:var(--nero2);border-radius:18px;padding:18px;border:1px solid #26222e}
+.prova b{display:block;font-family:Anton,sans-serif;font-size:34px;line-height:1;color:var(--tiffany)}
+.prova span{font-size:14px;color:var(--grigio)}
+.clienti{margin-top:22px}
+
+/* programma */
+.programma{background:linear-gradient(180deg,var(--nero),#120f18)}
+.moduli{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.modulo{background:var(--nero2);border-radius:var(--r);padding:26px;border-top:4px solid var(--fucsia)}
+.modulo:nth-child(2){border-top-color:var(--viola)} .modulo:nth-child(3){border-top-color:var(--tiffany)}
+.modulo small{font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--grigio2);font-size:12px}
+.modulo h3{font-family:Anton,sans-serif;text-transform:uppercase;font-weight:400;font-size:30px;line-height:1;margin:8px 0 14px}
+.modulo ul{margin:0;padding-left:18px;color:#D8D3DF;font-size:16px}
+.modulo li{margin:6px 0}
+.extra{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.box{background:var(--nero2);border-radius:var(--r);padding:24px 26px;border:1px solid #26222e}
+.box h3{margin:0 0 10px;font-size:20px}
+.box ul{margin:0;padding-left:18px;color:#D8D3DF;font-size:16px}
+.chip{display:inline-block;font-size:13px;font-weight:700;border-radius:999px;padding:6px 12px;background:#221d2b;color:var(--tiffany);margin:4px 6px 0 0}
+
+/* prima e dopo */
+.pd{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.pd .slot{aspect-ratio:9/16;min-height:0}
+
+/* per chi */
+.perchi{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.perchi .box h3 .si{color:var(--tiffany)} .perchi .box h3 .no{color:var(--fucsia)}
+
+/* prezzi */
+.prezzi{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:36px;align-items:stretch}
+.prezzo{border-radius:28px;padding:34px 30px;background:var(--nero2);border:1px solid #2b2634;display:flex;flex-direction:column}
+.prezzo.top{background:linear-gradient(160deg,#2a1440,#1a0f24 60%);border:2px solid var(--viola);position:relative}
+.prezzo .etich{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--grigio)}
+.prezzo h3{font-family:Anton,sans-serif;text-transform:uppercase;font-weight:400;font-size:38px;line-height:1;margin:10px 0 6px}
+.prezzo .cifra{font-family:Anton,sans-serif;font-size:64px;line-height:1;margin:14px 0 2px}
+.prezzo .sotto{color:var(--grigio);font-size:15px;margin-bottom:18px}
+.prezzo ul{list-style:none;padding:0;margin:0 0 26px;flex:1}
+.prezzo li{padding:7px 0 7px 30px;position:relative;font-size:16px;border-bottom:1px solid rgba(255,255,255,.06)}
+.prezzo li::before{content:"";position:absolute;left:4px;top:15px;width:12px;height:7px;border-left:3px solid var(--tiffany);border-bottom:3px solid var(--tiffany);transform:rotate(-45deg)}
+.prezzo .btn{width:100%}
+.consigliato{position:absolute;top:-14px;right:24px;background:var(--fucsia);color:#fff;font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:6px 12px}
+.bonus-lancio{margin-top:22px;border-radius:22px;padding:20px 24px;background:rgba(79,209,197,.08);border:1px solid rgba(79,209,197,.4);color:#DDF7F4}
+
+/* testimonianze */
+.test{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+
+/* faq */
+.faq details{background:var(--nero2);border-radius:18px;padding:18px 22px;margin-top:12px;border:1px solid #26222e}
+.faq summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--tiffany);font-size:24px;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--grigio);margin:12px 0 0}
+
+/* finale */
+.finale{text-align:center;padding:96px 0;background:radial-gradient(circle at 50% 0%,rgba(230,20,140,.25),transparent 60%)}
+.finale h2{max-width:900px;margin:0 auto 18px}
+footer{border-top:1px solid #221e28;color:var(--grigio2);font-size:14px;padding:30px 0 50px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+
+@media (max-width:900px){
+  section{padding:64px 0}
+  .hero .wrap,.chi .wrap{grid-template-columns:1fr}
+  .hero-vis{min-height:460px;max-width:420px;margin:0 auto;width:100%}
+  .griglia{grid-template-columns:1fr 1fr}
+  .moduli,.pd,.test,.prove{grid-template-columns:1fr}
+  .extra,.perchi,.prezzi{grid-template-columns:1fr}
+  .pd .slot{aspect-ratio:auto;min-height:220px}
+}
+@media (max-width:520px){
+  body{font-size:17px}
+  .griglia{grid-template-columns:1fr}
+  .tel{width:210px;height:420px;right:10px}
+  .polaroid{width:170px}.polaroid img{height:200px}
+  .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<div class="bozza">BOZZA · non pubblicata · i riquadri tratteggiati sono <b>materiali da ricevere da Mickel</b></div>
+
+<!-- banner del bonus: si vede da solo fino a domenica 1/11 a mezzanotte -->
+<div class="bonusbar" id="bonusbar">Fino a domenica 1 novembre: chi entra viene alla <a href="#prezzi">live riservata con Mickel del 5 novembre</a></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Il corso CapCut di Mickel Buratin</span>
+      <h1 class="display">Da clip grezza<span class="riga2">a video professionale</span></h1>
+      <p class="lead">Impari a montare su CapCut, da telefono o da PC, video che la gente guarda fino alla fine<br>Dalle basi agli effetti che fanno milioni di visualizzazioni, con il metodo di chi monta per creator e brand ogni giorno</p>
+      <div class="cta-riga">
+        <a class="btn primario js-corso" href="#prezzi">Prendi il corso · 97€</a>
+        <a class="btn secondario" href="#prezzi">Oppure tutta l'Academy</a>
+      </div>
+      <div class="numeri">
+        <span><b>96,9k</b>su Instagram</span>
+        <span><b>664mila</b>su TikTok</span>
+        <span><b>32,8k</b>su YouTube</span>
+      </div>
+    </div>
+    <div class="hero-vis" aria-hidden="true">
+      <div class="adesivo">telefono e PC</div>
+      <div class="tel"><img src="assets/capcut-effetto-clone.jpg" alt=""></div>
+      <div class="polaroid"><img src="assets/mickel-provvisoria.jpg" alt=""><b>Mickel</b><span>videomaker e creator</span></div>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:20px">
+  <div class="wrap video-trailer">
+    <div class="slot"><b>Video di presentazione · da Mickel</b><span>30-60 secondi: chi è, cosa impari nel corso, un prima e dopo veloce<br>Verticale o orizzontale, va bene girato col telefono</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">Ti suona familiare?</span>
+    <h2 class="display">Ore su CapCut, e il video <span class="fucsia">sembra ancora fatto in casa</span></h2>
+    <p class="lead">Non ti manca il talento: ti manca qualcuno che ti faccia vedere, passo per passo, come si monta un video che tiene chi guarda</p>
+    <div class="griglia">
+      <div class="card"><div class="n">01</div><h3>Ci metti ore</h3><p>Ti perdi nella timeline e un reel di trenta secondi ti porta via la serata</p></div>
+      <div class="card"><div class="n">02</div><h3>Tagli a caso</h3><p>La musica va per conto suo e i tagli non cadono mai sul ritmo</p></div>
+      <div class="card"><div class="n">03</div><h3>Sottotitoli che non aiutano</h3><p>Coprono la faccia, vanno a capo male, finiscono sotto i tasti dell'app</p></div>
+      <div class="card"><div class="n">04</div><h3>Pubblichi e si vede male</h3><p>Sul telefono era nitido, su Instagram è sgranato: è un problema di impostazioni</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="chi">
+  <div class="wrap">
+    <div class="foto-mickel">
+      <img src="assets/mickel-provvisoria.jpg" alt="Mickel Buratin">
+      <div class="nota">Foto provvisoria presa dal corso: da sostituire con una foto vera di Mickel</div>
+    </div>
+    <div>
+      <span class="kicker">Chi ti insegna</span>
+      <h2 class="display">Mickel <span class="fucsia">Buratin</span></h2>
+      <p class="lead">Nasco fotografo, poi videomaker e social media manager<br>Da anni monto i contenuti di creator e brand, e su CapCut lavoro ogni giorno: questo corso è il metodo che uso io, dalla prima clip all'esportazione</p>
+      <div class="prove">
+        <div class="prova"><b>8 milioni</b><span>di visualizzazioni sul mio video più virale</span></div>
+        <div class="prova"><b>+1 milione</b><span>sul video del gemello, fatto con l'effetto clone che ti insegno</span></div>
+        <div class="prova"><b>98%</b><span>di chi ha visto un mio reel da quasi 700mila views non mi seguiva</span></div>
+      </div>
+      <div class="slot clienti" style="min-height:110px;margin-top:22px"><b>Clienti e lavori · da Mickel</b><span>I nomi o i loghi dei clienti che si possono citare, e 2-3 lavori per brand da far vedere</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="programma" id="programma">
+  <div class="wrap">
+    <span class="kicker">Cosa c'è dentro</span>
+    <h2 class="display">15 lezioni pratiche, <span class="tiffany">da telefono e da PC</span></h2>
+    <p class="lead">Ogni lezione esiste in due versioni: scegli quella che usi, o guardale tutte e due<br>Una versione dura circa un'ora e mezza, a pezzi da pochi minuti</p>
+    <div class="moduli">
+      <div class="modulo"><small>Modulo 1</small><h3>Monta il tuo primo video</h3><ul><li>Installa CapCut e scopri l'interfaccia</li><li>Importa le clip, muoviti nella timeline, taglia</li><li>Titoli e testi: font, stili e livelli</li><li>Musica e suoni</li><li>Esporta senza perdere qualità</li></ul></div>
+      <div class="modulo"><small>Modulo 2</small><h3>Dai ritmo ai tuoi video</h3><ul><li>Transizioni che servono la storia</li><li>Montare a ritmo di musica</li><li>Sottotitoli automatici e animati</li><li>Template: un video pronto in due minuti</li><li>Filtri e color correction</li></ul></div>
+      <div class="modulo"><small>Modulo 3</small><h3>Il livello professionale</h3><ul><li>L'effetto clone con le maschere</li><li>Zoom con i keyframe e speed ramp</li><li>Pubblica bene su Instagram, TikTok e YouTube</li></ul></div>
+    </div>
+    <div class="extra">
+      <div class="box"><h3>Bonus · Parola a Mickel</h3><ul><li>Come ho fatto il mio video da 8 milioni di visualizzazioni</li><li>Dopo il montaggio: CTA, engagement e insight</li></ul></div>
+      <div class="box"><h3>E in più</h3><span class="chip">PDF dei suoni da cercare su CapCut</span><span class="chip">CapCut gratis o Pro: quando conviene</span><span class="chip">Se monti per i clienti</span><span class="chip">Aggiornamenti quando CapCut cambia</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">Prima e dopo</span>
+    <h2 class="display">La stessa clip, <span class="fucsia">montata come si deve</span></h2>
+    <div class="pd">
+      <div class="slot"><b>Prima e dopo 1 · da Mickel</b><span>La clip grezza e il video finito, uno dopo l'altro, 10-15 secondi</span></div>
+      <div class="slot"><b>Prima e dopo 2 · da Mickel</b><span>Meglio se di un tipo diverso: parlato, prodotto, viaggio</span></div>
+      <div class="slot"><b>Prima e dopo 3 · da Mickel</b><span>Uno con l'effetto clone o lo speed ramp</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">Per chi è</span>
+    <h2 class="display">Il corso giusto, <span class="tiffany">se ti ritrovi qui</span></h2>
+    <div class="perchi">
+      <div class="box"><h3><span class="si">Fa per te</span> se</h3><ul><li>parti da zero e vuoi capire CapCut senza perderti</li><li>pubblichi già e vuoi video che si guardano fino in fondo</li><li>sei SMM o UGC creator e monti per i clienti: ti serve velocità e una qualità che si vede</li><li>hai un'attività e vuoi farti i video da sola o da solo</li></ul></div>
+      <div class="box"><h3><span class="no">Non fa per te</span> se</h3><ul><li>cerchi un corso di Premiere o DaVinci</li><li>vuoi la strategia dei contenuti senza imparare a montare: per quella c'è l'Academy (qui sotto)</li><li>pensi che basti guardare: le lezioni si fanno con CapCut aperto</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="prezzi">
+  <div class="wrap">
+    <span class="kicker">Due strade</span>
+    <h2 class="display">Scegli <span class="fucsia">la tua</span></h2>
+    <div class="prezzi">
+      <div class="prezzo">
+        <span class="etich">Solo il corso</span>
+        <h3>Il corso CapCut di Mickel</h3>
+        <div class="cifra">97€</div>
+        <div class="sotto">una volta sola, tuo per sempre</div>
+        <ul>
+          <li>15 lezioni, da telefono e da PC</li>
+          <li>Le lezioni bonus di Mickel</li>
+          <li>PDF dei suoni, CapCut gratis o Pro, Se monti per i clienti</li>
+          <li>Gli aggiornamenti quando CapCut cambia</li>
+          <li>Accesso su Unlike Academy, da app o da browser</li>
+        </ul>
+        <a class="btn primario js-corso" href="#" data-checkout="CORSO">Prendi il corso</a>
+      </div>
+      <div class="prezzo top">
+        <span class="consigliato">Il più completo</span>
+        <span class="etich">Tutta l'Academy</span>
+        <h3>Unlike Academy All-Access</h3>
+        <div class="cifra">229€</div>
+        <div class="sotto">ogni 3 mesi, oppure 790€ l'anno</div>
+        <ul>
+          <li>Il corso CapCut di Mickel, completo</li>
+          <li>Tutti i corsi di Unlike Academy: Instagram, TikTok, AI per i social e gli altri</li>
+          <li>Stratego, la piattaforma che ti aiuta a costruire la tua strategia</li>
+          <li>Le live con il team e la community</li>
+          <li>Montaggio e strategia insieme: i video belli che portano clienti</li>
+        </ul>
+        <a class="btn primario js-allaccess" href="https://club.unlikeacademy.it/checkout/all-access-sblocca-tutto" data-checkout="ALLACCESS">Entra con l'All-Access</a>
+      </div>
+    </div>
+    <div class="bonus-lancio" id="bonuslancio"><b>Bonus di lancio:</b> chi entra entro domenica 1 novembre, con il corso o con l'All-Access, viene alla live di gruppo riservata con Mickel di giovedì 5 novembre</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">Chi l'ha già fatto</span>
+    <h2 class="display">Le parole <span class="tiffany">di chi monta con Mickel</span></h2>
+    <div class="test">
+      <div class="slot"><b>Testimonianza 1 · da Mickel</b><span>Screenshot o video di chi ha fatto il suo corso o ha lavorato con lui, con il consenso a pubblicarlo</span></div>
+      <div class="slot"><b>Testimonianza 2 · da Mickel</b><span>Meglio con un risultato concreto: un video, un numero, un cliente</span></div>
+      <div class="slot"><b>Testimonianza 3 · da Mickel</b><span>Anche un messaggio in DM va bene, così com'è</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <span class="kicker">Domande</span>
+    <h2 class="display">Prima di <span class="fucsia">entrare</span></h2>
+    <details><summary>Mi serve CapCut Pro?</summary><p>No: il corso parte dalla versione gratuita e c'è una lezione apposta per capire cosa fai gratis, cosa solo con il Pro e quando conviene pagarlo</p></details>
+    <details><summary>Parto da zero, ce la faccio?</summary><p>Sì: il primo modulo sono le basi: installazione, timeline, tagli, testi, musica ed esportazione</p></details>
+    <details><summary>Telefono o PC?</summary><p>Tutti e due: ogni lezione c'è in versione telefono e in versione PC: scegli quella che usi</p></details>
+    <details><summary>Quanto dura?</summary><p>Una versione dura circa un'ora e mezza, in lezioni da pochi minuti<br>Le guardi quando vuoi e con CapCut aperto</p></details>
+    <details><summary>Uso Edits o un'altra app, mi serve?</summary><p>Ritmo, tagli, testi e qualità di esportazione si imparano una volta e valgono anche lì<br>Su CapCut in più hai keyframe, maschere e la versione per PC</p></details>
+    <details><summary>Per quanto tempo vedo il corso?</summary><p>Con il corso singolo per sempre, con l'All-Access finché l'abbonamento è attivo</p></details>
+    <details><summary>Dove lo guardo?</summary><p>Su Unlike Academy, la piattaforma dei corsi di Gemma Lenoci: da browser o dall'app, dal telefono o dal computer</p></details>
+  </div>
+</section>
+
+<section class="finale">
+  <div class="wrap">
+    <h2 class="display">Il prossimo video <span class="fucsia">lo monti tu</span></h2>
+    <p class="lead" style="margin:0 auto 28px">E questa volta lo guardano fino alla fine</p>
+    <div class="cta-riga" style="justify-content:center">
+      <a class="btn primario js-corso" href="#prezzi">Prendi il corso · 97€</a>
+      <a class="btn secondario" href="#prezzi">Oppure tutta l'Academy</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Il corso CapCut di Mickel Buratin è su Unlike Academy</span>
+    <span>Privacy · Termini (da collegare)</span>
+  </div>
+</footer>
+
+<script>
+// ===== DA COMPILARE =====
+// link di pagamento del corso singolo da 97€: si crea su Circle (pagamento + gruppo "Corso CapCut Mickel")
+var CHECKOUT_CORSO = "";
+var CHECKOUT_ALLACCESS = "https://club.unlikeacademy.it/checkout/all-access-sblocca-tutto";
+var FINE_BONUS = new Date("2026-11-01T23:59:59+01:00");
+
+// i parametri del link della landing (es. il codice affiliato di Mickel) passano ai bottoni di pagamento
+function conParametri(url){
+  var q = window.location.search.replace(/^\?/, "");
+  if(!q) return url;
+  return url + (url.indexOf("?") > -1 ? "&" : "?") + q;
+}
+document.querySelectorAll('[data-checkout="CORSO"]').forEach(function(a){
+  if(CHECKOUT_CORSO){ a.href = conParametri(CHECKOUT_CORSO); } else { a.classList.add("manca"); a.href = "#prezzi"; }
+});
+document.querySelectorAll('[data-checkout="ALLACCESS"]').forEach(function(a){ a.href = conParametri(CHECKOUT_ALLACCESS); });
+
+// il bonus di lancio sparisce da solo dopo domenica 1/11
+if(new Date() > FINE_BONUS){
+  ["bonusbar","bonuslancio"].forEach(function(id){ var el = document.getElementById(id); if(el) el.remove(); });
+}
+</script>
+</body>
+</html>
