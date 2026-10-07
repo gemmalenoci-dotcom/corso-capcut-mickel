@@ -155,21 +155,94 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
   .extra,.perchi,.prezzi{grid-template-columns:1fr}
   .pd .slot{aspect-ratio:auto;min-height:220px}
 }
+.solo-mob{display:none}
+.barra-mob{display:none}
+@media (max-width:700px){
+  body{font-size:16px;overflow-x:hidden}
+  .solo-desk{display:none} .solo-mob{display:inline}
+  section{padding:46px 0}
+  h2{font-size:clamp(34px,10vw,46px);margin:8px 0 12px}
+  p.lead{font-size:16.5px}
+  .kicker{font-size:12px;letter-spacing:.12em}
+  .bozza{font-size:11px;padding:5px 8px;letter-spacing:.03em}
+  .bonusbar{font-size:13.5px;padding:9px 12px}
+  /* prima schermata */
+  .hero{padding:34px 0 30px}
+  .hero h1{font-size:clamp(46px,14vw,64px);margin:10px 0 14px}
+  .hero .wrap{gap:24px}
+  .cta-riga{margin-top:22px;gap:10px}
+  .btn{padding:15px 22px;font-size:16px}
+  .numeri{margin-top:20px;gap:6px 18px;font-size:13.5px}
+  .numeri b{font-size:17px}
+  .hero-vis{min-height:350px;max-width:340px}
+  .tel{width:170px;height:345px;border-radius:34px;padding:7px;right:8px}
+  .tel img{border-radius:28px}
+  .polaroid{width:150px;padding:7px 7px 0;left:4px;bottom:0}
+  .polaroid img{height:170px}
+  .polaroid b{font-size:16px}
+  .adesivo{font-size:13px;padding:8px 11px;top:-8px}
+  .video-trailer .slot{min-height:0;aspect-ratio:16/9;padding:16px}
+  /* schede che scorrono di lato */
+  .scorre{display:flex !important;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;
+    margin:22px -22px 0;padding:0 22px 8px;scroll-padding-left:22px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .scorre::-webkit-scrollbar{display:none}
+  .scorre > *{flex:0 0 78%;scroll-snap-align:start}
+  .griglia.scorre > *{flex-basis:62%}
+  .card{padding:20px 18px}
+  .card .n{font-size:32px}
+  .card h3{font-size:17px;margin:8px 0 6px}
+  .card p{font-size:15px}
+  /* chi è */
+  .chi .wrap{gap:22px}
+  .foto-mickel{aspect-ratio:4/5;max-width:300px;width:100%;margin:0 auto}
+  .prove{gap:8px;margin-top:18px}
+  .prova{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:14px}
+  .prova b{flex:0 0 112px;font-size:26px}
+  .prova span{font-size:13.5px;line-height:1.35}
+  /* programma */
+  .moduli.scorre > *{flex-basis:84%}
+  .modulo{padding:22px 20px}
+  .modulo h3{font-size:26px}
+  .modulo ul,.box ul{font-size:15px}
+  .extra,.perchi{gap:12px}
+  .box{padding:20px}
+  .box h3{font-size:18px}
+  /* prima e dopo, testimonianze */
+  .pd.scorre > *{flex-basis:62%;aspect-ratio:9/16;min-height:0}
+  .test.scorre > *{min-height:170px}
+  /* prezzi */
+  .prezzi{gap:16px;margin-top:24px}
+  .prezzo{padding:26px 22px;border-radius:22px}
+  .prezzo h3{font-size:30px}
+  .prezzo .cifra{font-size:54px}
+  .prezzo li{font-size:15px;padding:6px 0 6px 28px}
+  .prezzo li::before{top:13px}
+  .bonus-lancio{font-size:15px;padding:16px 18px}
+  /* faq e finale */
+  .faq summary{font-size:16.5px}
+  .faq details{padding:15px 16px}
+  .finale{padding:60px 0 110px}
+  footer{padding:24px 0 100px;font-size:13px}
+  /* barra fissa in basso */
+  .barra-mob{display:flex;position:fixed;left:10px;right:10px;bottom:10px;z-index:60;align-items:center;justify-content:space-between;gap:12px;
+    background:rgba(22,20,27,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #2e2937;border-radius:18px;padding:10px 10px 10px 16px;
+    box-shadow:0 16px 40px -12px rgba(0,0,0,.8);transform:translateY(140%);transition:transform .25s ease}
+  .barra-mob.on{transform:none}
+  .barra-mob b{display:block;font-size:14.5px}
+  .barra-mob span{display:block;font-size:12.5px;color:var(--grigio)}
+  .barra-mob .btn{width:auto;padding:12px 22px;font-size:15px;flex:none}
+}
 @media (max-width:520px){
-  body{font-size:17px}
-  .griglia{grid-template-columns:1fr}
-  .tel{width:210px;height:420px;right:10px}
-  .polaroid{width:170px}.polaroid img{height:200px}
-  .btn{width:100%}
+  .cta-riga .btn{width:100%}
 }
 </style>
 </head>
 <body>
 
-<div class="bozza">BOZZA · non pubblicata · i riquadri tratteggiati sono <b>materiali da ricevere da Mickel</b></div>
+<div class="bozza">BOZZA<span class="solo-desk"> · non pubblicata</span> · i riquadri tratteggiati sono <b>materiali da ricevere da Mickel</b></div>
 
 <!-- banner del bonus: si vede da solo fino a domenica 1/11 a mezzanotte -->
-<div class="bonusbar" id="bonusbar">Fino a domenica 1 novembre: chi entra viene alla <a href="#prezzi">live riservata con Mickel del 5 novembre</a></div>
+<div class="bonusbar" id="bonusbar"><span class="solo-desk">Fino a domenica 1 novembre: chi entra viene alla </span><span class="solo-mob">Entro l'1/11: </span><a href="#prezzi">live riservata con Mickel del 5 novembre</a></div>
 
 <header class="hero">
   <div class="wrap">
@@ -206,7 +279,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
     <span class="kicker">Ti suona familiare?</span>
     <h2 class="display">Ore su CapCut, e il video <span class="fucsia">sembra ancora fatto in casa</span></h2>
     <p class="lead">Non ti manca il talento: ti manca qualcuno che ti faccia vedere, passo per passo, come si monta un video che tiene chi guarda</p>
-    <div class="griglia">
+    <div class="griglia scorre">
       <div class="card"><div class="n">01</div><h3>Ci metti ore</h3><p>Ti perdi nella timeline e un reel di trenta secondi ti porta via la serata</p></div>
       <div class="card"><div class="n">02</div><h3>Tagli a caso</h3><p>La musica va per conto suo e i tagli non cadono mai sul ritmo</p></div>
       <div class="card"><div class="n">03</div><h3>Sottotitoli che non aiutano</h3><p>Coprono la faccia, vanno a capo male, finiscono sotto i tasti dell'app</p></div>
@@ -240,7 +313,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
     <span class="kicker">Cosa c'è dentro</span>
     <h2 class="display">15 lezioni pratiche, <span class="tiffany">da telefono e da PC</span></h2>
     <p class="lead">Ogni lezione esiste in due versioni: scegli quella che usi, o guardale tutte e due<br>Una versione dura circa un'ora e mezza, a pezzi da pochi minuti</p>
-    <div class="moduli">
+    <div class="moduli scorre">
       <div class="modulo"><small>Modulo 1</small><h3>Monta il tuo primo video</h3><ul><li>Installa CapCut e scopri l'interfaccia</li><li>Importa le clip, muoviti nella timeline, taglia</li><li>Titoli e testi: font, stili e livelli</li><li>Musica e suoni</li><li>Esporta senza perdere qualità</li></ul></div>
       <div class="modulo"><small>Modulo 2</small><h3>Dai ritmo ai tuoi video</h3><ul><li>Transizioni che servono la storia</li><li>Montare a ritmo di musica</li><li>Sottotitoli automatici e animati</li><li>Template: un video pronto in due minuti</li><li>Filtri e color correction</li></ul></div>
       <div class="modulo"><small>Modulo 3</small><h3>Il livello professionale</h3><ul><li>L'effetto clone con le maschere</li><li>Zoom con i keyframe e speed ramp</li><li>Pubblica bene su Instagram, TikTok e YouTube</li></ul></div>
@@ -256,7 +329,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
   <div class="wrap">
     <span class="kicker">Prima e dopo</span>
     <h2 class="display">La stessa clip, <span class="fucsia">montata come si deve</span></h2>
-    <div class="pd">
+    <div class="pd scorre">
       <div class="slot"><b>Prima e dopo 1 · da Mickel</b><span>La clip grezza e il video finito, uno dopo l'altro, 10-15 secondi</span></div>
       <div class="slot"><b>Prima e dopo 2 · da Mickel</b><span>Meglio se di un tipo diverso: parlato, prodotto, viaggio</span></div>
       <div class="slot"><b>Prima e dopo 3 · da Mickel</b><span>Uno con l'effetto clone o lo speed ramp</span></div>
@@ -318,7 +391,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
   <div class="wrap">
     <span class="kicker">Chi l'ha già fatto</span>
     <h2 class="display">Le parole <span class="tiffany">di chi monta con Mickel</span></h2>
-    <div class="test">
+    <div class="test scorre">
       <div class="slot"><b>Testimonianza 1 · da Mickel</b><span>Screenshot o video di chi ha fatto il suo corso o ha lavorato con lui, con il consenso a pubblicarlo</span></div>
       <div class="slot"><b>Testimonianza 2 · da Mickel</b><span>Meglio con un risultato concreto: un video, un numero, un cliente</span></div>
       <div class="slot"><b>Testimonianza 3 · da Mickel</b><span>Anche un messaggio in DM va bene, così com'è</span></div>
@@ -358,6 +431,11 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
   </div>
 </footer>
 
+<div class="barra-mob" id="barra">
+  <div><b>Il corso di Mickel</b><span>da 97€ · telefono e PC</span></div>
+  <a class="btn primario" href="#prezzi">Scegli</a>
+</div>
+
 <script>
 // ===== DA COMPILARE =====
 // link di pagamento del corso singolo da 97€: si crea su Circle (pagamento + gruppo "Corso CapCut Mickel")
@@ -375,6 +453,18 @@ document.querySelectorAll('[data-checkout="CORSO"]').forEach(function(a){
   if(CHECKOUT_CORSO){ a.href = conParametri(CHECKOUT_CORSO); } else { a.classList.add("manca"); a.href = "#prezzi"; }
 });
 document.querySelectorAll('[data-checkout="ALLACCESS"]').forEach(function(a){ a.href = conParametri(CHECKOUT_ALLACCESS); });
+
+// barra fissa sul telefono: compare dopo la prima schermata, sparisce quando si vedono i prezzi o il finale
+(function(){
+  var barra = document.getElementById("barra"); if(!barra || !("IntersectionObserver" in window)) return;
+  var visibili = {};
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ visibili[e.target.id || e.target.className] = e.isIntersecting; });
+    var nascondi = visibili["hero"] || visibili["prezzi"] || visibili["finale"];
+    barra.classList.toggle("on", !nascondi);
+  }, {threshold: 0.05});
+  ["header.hero", "#prezzi", "section.finale"].forEach(function(q){ var el = document.querySelector(q); if(el){ if(!el.id) el.id = q.indexOf("hero")>-1 ? "hero" : "finale"; io.observe(el); } });
+})();
 
 // il bonus di lancio sparisce da solo dopo domenica 1/11
 if(new Date() > FINE_BONUS){
