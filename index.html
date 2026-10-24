@@ -236,6 +236,44 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
 @media (max-width:520px){
   .cta-riga .btn{width:100%}
 }
+
+/* 24/10: schermate delle lezioni, riquadro Unlike Academy, banner dei cookie */
+.galleria{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.galleria figure{margin:0;background:var(--nero2);border:1px solid #26222e;border-radius:var(--r);overflow:hidden}
+.galleria img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.galleria figcaption{padding:12px 16px 14px;font-weight:800;font-size:16px}
+.galleria figcaption span{display:block;font-weight:500;color:var(--grigio);font-size:14px;margin-top:3px}
+.academy{display:grid;grid-template-columns:330px 1fr;gap:34px;align-items:start;margin-top:34px}
+.academy .foto{border-radius:28px;overflow:hidden;aspect-ratio:3/4;position:relative;background:var(--nero3)}
+.academy .foto img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
+.academy .foto b{position:absolute;left:14px;bottom:14px;right:14px;background:rgba(13,12,16,.84);border-radius:14px;padding:10px 14px;font-size:16px}
+.academy .foto b span{display:block;font-weight:500;color:var(--grigio);font-size:13px}
+.dentro{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dentro .box{padding:20px 22px}
+.dentro .box h3{font-size:18px;margin:0 0 6px}
+.dentro .box p{margin:0;color:var(--grigio);font-size:15px}
+.dentro .box.str{grid-column:1/-1;border:2px solid var(--viola);background:linear-gradient(160deg,#2a1440,#1a0f24 70%)}
+.dentro .box.str h3{color:var(--tiffany)}
+.academy .cta-riga{margin-top:20px}
+footer .legal a{color:var(--grigio);text-decoration:underline;text-underline-offset:3px}
+footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.ckb{position:fixed;left:16px;bottom:16px;z-index:1200;max-width:500px;background:#fff;color:#2a2630;border-radius:18px;padding:18px 18px 16px;box-shadow:0 24px 50px -20px rgba(0,0,0,.7)}
+.ckb[hidden]{display:none}
+.ckb p{font-size:13.5px;line-height:1.5;margin:0 0 12px}
+.ckb a{color:var(--fucsia);text-decoration:underline}
+.ckb .ckbtn{display:flex;gap:10px;justify-content:flex-end}
+.ckb .btn{padding:10px 20px;font-size:14px}
+.ckb .btn.secondario{color:#2a2630;border-color:#c9c4d0}
+@media (max-width:900px){
+  .galleria{grid-template-columns:1fr 1fr}
+  .academy{grid-template-columns:1fr}
+  .academy .foto{max-width:320px;width:100%;margin:0 auto}
+}
+@media (max-width:700px){
+  .galleria.scorre > *{flex-basis:84%}
+  .dentro{grid-template-columns:1fr}
+  .ckb{left:10px;right:10px;bottom:10px;max-width:none}
+}
 </style>
 </head>
 <body>
@@ -324,6 +362,23 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
   </div>
 </section>
 
+<section>
+  <div class="wrap">
+    <span class="kicker">Dentro le lezioni</span>
+    <h2 class="display">Lo vedi montare, <span class="fucsia">clic dopo clic</span></h2>
+    <p class="lead">Schermate vere del corso: CapCut aperto, Mickel che monta e ti spiega ogni passaggio</p>
+    <div class="galleria scorre">
+      <figure><img src="assets/lez-effetto-clone.jpg" alt="Lezione sull'effetto clone" loading="lazy"><figcaption>L'effetto clone<span>Due te nella stessa scena, con le maschere</span></figcaption></figure>
+      <figure><img src="assets/lez-maschere.jpg" alt="Lezione sulle maschere in CapCut" loading="lazy"><figcaption>Le maschere<span>La linea che unisce le due clip, spostata al millimetro</span></figcaption></figure>
+      <figure><img src="assets/lez-testi.jpg" alt="Lezione su testi e stili" loading="lazy"><figcaption>Testi e stili<span>Font, animazioni e titoli che entrano al momento giusto</span></figcaption></figure>
+      <figure><img src="assets/lez-colore.jpg" alt="Lezione sulla color correction" loading="lazy"><figcaption>Il colore<span>Color correction per dare ai video lo stesso stile</span></figcaption></figure>
+      <figure><img src="assets/lez-keyframe.jpg" alt="Lezione su keyframe e speed ramp" loading="lazy"><figcaption>Keyframe e speed ramp<span>Zoom, accelerazioni e rallentamenti che tengono chi guarda</span></figcaption></figure>
+      <figure><img src="assets/lez-telefono.jpg" alt="Mickel spiega una lezione da telefono" loading="lazy"><figcaption>Anche da telefono<span>Ogni lezione c'è nella versione per smartphone</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+
 <!-- PRIMA E DOPO: si rimette quando Mickel manda le 3 clip
 <section>
   <div class="wrap">
@@ -345,6 +400,29 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
     <div class="perchi">
       <div class="box"><h3><span class="si">Fa per te</span> se</h3><ul><li>parti da zero e vuoi capire CapCut senza perderti</li><li>pubblichi già e vuoi video che si guardano fino in fondo</li><li>sei SMM o UGC creator e monti per i clienti: ti serve velocità e una qualità che si vede</li><li>hai un'attività e vuoi fare i video in autonomia</li></ul></div>
       <div class="box"><h3><span class="no">Non fa per te</span> se</h3><ul><li>cerchi un corso di Premiere o DaVinci</li><li>vuoi la strategia dei contenuti senza imparare a montare: per quella c'è l'Academy (qui sotto)</li><li>pensi che basti guardare: le lezioni si fanno con CapCut aperto</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="academy">
+  <div class="wrap">
+    <span class="kicker">Oppure tutta l'Academy</span>
+    <h2 class="display">Unlike Academy: <span class="fucsia">montaggio e strategia</span></h2>
+    <p class="lead">Il corso di Mickel ti insegna a montare. Dentro Unlike Academy impari anche cosa pubblicare, a chi parlare e come trasformare chi guarda in clienti, con il metodo di Gemma Lenoci e del suo team</p>
+    <div class="academy">
+      <div class="foto"><img src="assets/gemma.jpg" alt="Gemma Lenoci" loading="lazy"><b>Gemma Lenoci<span>founder di Unlike Academy</span></b></div>
+      <div>
+        <div class="dentro">
+          <div class="box"><h3>Il corso CapCut di Mickel</h3><p>Completo, e resta tuo per sempre</p></div>
+          <div class="box"><h3>Tutti i videocorsi</h3><p>Dal metodo al piano editoriale, poi funnel, Instagram, Stories-Telling e TikTok</p></div>
+          <div class="box"><h3>Corso AI per i social</h3><p>L'intelligenza artificiale come acceleratore, con aggiornamenti ogni mese</p></div>
+          <div class="box"><h3>Piano editoriale del mese</h3><p>Con esempi per nicchia, per sapere sempre cosa pubblicare</p></div>
+          <div class="box"><h3>Live con Gemma e il team</h3><p>E lezioni di aggiornamento ogni mese, che restano in archivio</p></div>
+          <div class="box"><h3>Community e app</h3><p>Chat, risultati, collaborazioni e sconti sui percorsi 1:1</p></div>
+          <div class="box str"><h3>Stratego, la piattaforma che abbiamo creato noi</h3><p>Ti aiuta a costruire la tua strategia social e il piano editoriale, mese dopo mese, puntando a contatti e clienti e non solo alle visualizzazioni · 1 account incluso nell'All-Access</p></div>
+        </div>
+        <div class="cta-riga"><a class="btn primario js-allaccess" href="https://club.unlikeacademy.it/checkout/all-access-sblocca-tutto" data-checkout="ALLACCESS">Entra con l'All-Access</a><a class="btn secondario" href="#prezzi">Confronta le due strade</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -375,11 +453,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
         <div class="cifra">229€</div>
         <div class="sotto">ogni 3 mesi, oppure 790€ l'anno</div>
         <ul>
-          <li>Il corso CapCut di Mickel, completo</li>
-          <li>Tutti i corsi di Unlike Academy: Instagram, TikTok, AI per i social e gli altri</li>
-          <li>Stratego, la piattaforma che ti aiuta a costruire la tua strategia</li>
-          <li>Le live con il team e la community</li>
-          <li>Montaggio e strategia insieme: i video belli che portano clienti</li>
+          <li>Il corso CapCut di Mickel, tuo per sempre</li>
+          <li>Tutti i videocorsi: metodo, piano editoriale, funnel, Instagram, Storie e TikTok</li>
+          <li>Corso AI per i social</li>
+          <li>Stratego, la piattaforma che abbiamo creato noi: 1 account incluso</li>
+          <li>Piano editoriale del mese e live con Gemma</li>
+          <li>Community, app e sconti sui percorsi 1:1</li>
         </ul>
         <a class="btn primario js-allaccess" href="https://club.unlikeacademy.it/checkout/all-access-sblocca-tutto" data-checkout="ALLACCESS">Entra con l'All-Access</a>
       </div>
@@ -430,7 +509,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
 <footer>
   <div class="wrap">
     <span>Il corso CapCut di Mickel Buratin è su Unlike Academy</span>
-    <span>Privacy · Termini (da collegare)</span>
+    <span class="legal"><a href="https://unlikeacademy.it/Termini-e-Condizioni/">Termini e condizioni</a> · <a href="https://www.iubenda.com/privacy-policy/15204920">Privacy policy</a> · <a href="https://www.iubenda.com/privacy-policy/15204920/cookie-policy">Cookie policy</a> · <button type="button" id="ckOpen">Preferenze cookie</button></span>
   </div>
 </footer>
 
@@ -474,5 +553,30 @@ if(new Date() > FINE_BONUS){
   ["bonusbar","bonuslancio"].forEach(function(id){ var el = document.getElementById(id); if(el) el.remove(); });
 }
 </script>
+<div class="ckb" id="ckb" role="dialog" aria-label="Preferenze cookie" hidden>
+  <p>Usiamo i cookie di Meta per capire quali annunci ti hanno fatto arrivare qui. Li attiviamo solo se accetti · <a href="https://www.iubenda.com/privacy-policy/15204920/cookie-policy" target="_blank" rel="noopener">Cookie policy</a></p>
+  <div class="ckbtn"><button class="btn secondario" id="ckNo" type="button">Rifiuta</button><button class="btn primario" id="ckSi" type="button">Accetta</button></div>
+</div>
+
+<script>
+// banner dei cookie: il pixel di Meta parte solo dopo Accetta (stesso pixel e stessa scelta salvata della pagina del Club)
+(function(){
+  var PIXEL_ID='558379620509892';
+  var ckb=document.getElementById('ckb');
+  function loadPixel(){
+    if(window.fbq||!PIXEL_ID)return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init',PIXEL_ID);fbq('track','PageView');
+  }
+  var scelta=null;try{scelta=localStorage.getItem('ul_cookie')}catch(e){}
+  if(scelta==='si')loadPixel();else if(scelta!=='no'){ckb.hidden=false;}
+  function salva(v){try{localStorage.setItem('ul_cookie',v)}catch(e){}ckb.hidden=true;if(v==='si')loadPixel();}
+  document.getElementById('ckSi').addEventListener('click',function(){salva('si')});
+  document.getElementById('ckNo').addEventListener('click',function(){salva('no')});
+  document.getElementById('ckOpen').addEventListener('click',function(){ckb.hidden=false});
+  document.querySelectorAll('[data-checkout]').forEach(function(a){a.addEventListener('click',function(){try{if(window.fbq)fbq('track','InitiateCheckout',{content_name:a.getAttribute('data-checkout')==='CORSO'?'Corso CapCut 97':'All-Access'})}catch(e){}})});
+})();
+</script>
+
 </body>
 </html>
