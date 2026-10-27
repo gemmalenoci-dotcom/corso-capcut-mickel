@@ -507,8 +507,8 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
       </div>
     </div>
     <div class="bonus-lancio" id="offertalive">
-      <div data-fase="prima"><b>Solo nella live di giovedì 29 ottobre, dalle 20:00 a mezzanotte:</b> -20% sul corso, da 97€ a 77,60€, e con l'All-Access una mini consulenza con Mickel: check-up del tuo montaggio con consigli personalizzati</div>
-      <div data-fase="durante" hidden><b>Solo stasera, fino a mezzanotte:</b> -20% sul corso, da 97€ a 77,60€, già applicato dal bottone. Con l'All-Access, in più una mini consulenza con Mickel: check-up del tuo montaggio con consigli personalizzati</div>
+      <div data-fase="prima"><b>Solo nella live di giovedì 29 ottobre, dalle 20:00 a mezzanotte:</b> -20% sul corso, da 97€ a 77,60€, e con l'All-Access una consulenza personalizzata di un'ora con Mickel: check-up del tuo montaggio con consigli su misura</div>
+      <div data-fase="durante" hidden><b>Solo stasera, fino a mezzanotte:</b> -20% sul corso, da 97€ a 77,60€, già applicato dal bottone. Con l'All-Access, in più una consulenza personalizzata di un'ora con Mickel: check-up del tuo montaggio con consigli su misura</div>
     </div>
   </div>
 </section>
@@ -574,6 +574,8 @@ var CHECKOUT_ALLACCESS = "https://club.unlikeacademy.it/checkout/all-access-mick
 var INIZIO_LIVE = new Date("2026-10-29T20:00:00+01:00");
 var FINE_LIVE = new Date("2026-10-30T00:00:00+01:00");
 var COUPON_LIVE = "LIVECAPCUT20";
+// interruttore: false spegne tutta l'offerta della live (banner, riquadro, sconto nel link) senza toccare altro
+var OFFERTA_LIVE_ATTIVA = true;
 
 // i parametri del link della landing (es. il codice affiliato di Mickel) passano ai bottoni di pagamento
 function conParametri(url){
@@ -602,7 +604,7 @@ document.querySelectorAll('[data-checkout="ALLACCESS"]').forEach(function(a){ a.
 (function(){
   var ora = new Date();
   var fase = ora < INIZIO_LIVE ? "prima" : (ora < FINE_LIVE ? "durante" : "dopo");
-  if(fase === "dopo"){
+  if(!OFFERTA_LIVE_ATTIVA || fase === "dopo"){
     ["bonusbar","offertalive"].forEach(function(id){ var el = document.getElementById(id); if(el) el.remove(); });
     return;
   }
