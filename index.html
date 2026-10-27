@@ -274,14 +274,31 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
   .dentro{grid-template-columns:1fr}
   .ckb{left:10px;right:10px;bottom:10px;max-width:none}
 }
+
+/* i miei lavori: reel con i numeri veri e profili dei clienti */
+[hidden]{display:none!important}
+.lavori .reels{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:34px}
+.reel{margin:0;background:var(--nero2);border:1px solid #26222e;border-radius:var(--r);overflow:hidden}
+.reel img{display:block;width:100%;aspect-ratio:290/451;object-fit:cover}
+.reel figcaption{padding:12px 14px 14px}
+.reel figcaption b{display:block;font-size:15px}
+.reel figcaption span{display:block;font-size:13px;color:var(--grigio);margin-top:2px}
+.clienti-t{font-size:19px;margin:42px 0 0}
+.clienti{display:flex;flex-wrap:wrap;gap:22px 34px;margin-top:20px}
+.cl{display:flex;align-items:center;gap:12px}
+.cl img{width:64px;height:64px;border-radius:50%;flex:none}
+.cl b{display:block;font-size:15px}
+.cl span{display:block;font-size:13px;color:var(--grigio)}
+.fonte-dati{font-size:12.5px;color:var(--grigio);margin-top:22px;opacity:.8}
+@media (max-width:900px){.lavori .reels{display:flex;overflow-x:auto;gap:12px;padding-bottom:8px;scroll-snap-type:x mandatory}.lavori .reel{flex:0 0 220px;scroll-snap-align:start}}
 </style>
 </head>
 <body>
 
 <div class="bozza">BOZZA<span class="solo-desk"> · non ancora pubblicata</span></div>
 
-<!-- banner del bonus: si vede da solo fino a domenica 1/11 a mezzanotte -->
-<div class="bonusbar" id="bonusbar"><span class="solo-desk">Fino a domenica 1 novembre: chi entra viene alla </span><span class="solo-mob">Entro l'1/11: </span><a href="#prezzi">live riservata con Mickel del 5 novembre</a></div>
+<!-- banner dell'offerta della live: prima della live è un invito, durante la live porta allo sconto, dopo mezzanotte del 29/10 sparisce -->
+<div class="bonusbar" id="bonusbar"><span data-fase="prima"><span class="solo-desk">Giovedì 29 ottobre alle 20, solo in live: </span><span class="solo-mob">Giovedì 29, in live: </span><a href="https://club.unlikeacademy.it/c/dirette/video-belli-che-nessuno-guarda-il-problema-non-e-capcut">-20% sul corso fino a mezzanotte</a></span><span data-fase="durante" hidden><span class="solo-desk">Solo stasera, fino a mezzanotte: </span><span class="solo-mob">Fino a mezzanotte: </span><a href="#prezzi">-20% sul corso, da 97€ a 77,60€</a></span></div>
 
 <header class="hero">
   <div class="wrap">
@@ -345,6 +362,31 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
   </div>
 </section>
 
+<section class="lavori" id="lavori">
+  <div class="wrap">
+    <span class="kicker">I miei lavori</span>
+    <h2 class="display">Video da oltre un milione di visualizzazioni, <span class="fucsia">anche da profili piccoli</span></h2>
+    <p class="lead">Montaggio e social media management per ristoranti, squadre di calcio e creator: questi sono i numeri veri, presi dai profili dei miei clienti</p>
+    <div class="reels">
+      <figure class="reel"><img src="assets/clienti/reel-sushiclub-1600k.jpg" alt="Reel di Sushi Club con 1,6 milioni di visualizzazioni" loading="lazy"><figcaption><b>Sushi Club</b><span>1,6 Mln di visualizzazioni, da un profilo di 2.790 follower</span></figcaption></figure>
+      <figure class="reel"><img src="assets/clienti/reel-sushiclub-1400k.jpg" alt="Reel di Sushi Club con 1,4 milioni di visualizzazioni" loading="lazy"><figcaption><b>Sushi Club</b><span>1,4 Mln di visualizzazioni</span></figcaption></figure>
+      <figure class="reel"><img src="assets/clienti/reel-corman-445k.jpg" alt="Reel di Cormano Milano con 445mila visualizzazioni" loading="lazy"><figcaption><b>Cormano Milano 1991</b><span>445K visualizzazioni, da un profilo di 9.514 follower</span></figcaption></figure>
+      <figure class="reel"><img src="assets/clienti/reel-megu-161k.jpg" alt="Reel di Megu con 161mila visualizzazioni" loading="lazy"><figcaption><b>Megu</b><span>161K visualizzazioni</span></figcaption></figure>
+      <figure class="reel"><img src="assets/clienti/reel-megu-135k.jpg" alt="Reel di Megu con 135mila visualizzazioni" loading="lazy"><figcaption><b>Megu</b><span>135K visualizzazioni</span></figcaption></figure>
+    </div>
+    <h3 class="clienti-t">Alcuni dei profili per cui lavoro</h3>
+    <div class="clienti">
+      <div class="cl"><img src="assets/clienti/logo-massiemino.png" alt="Logo Massi e Mino" loading="lazy"><div><b>Massi e Mino</b><span>2,9 Mln follower</span></div></div>
+      <div class="cl"><img src="assets/clienti/logo-spacepatty.png" alt="Logo Space Patty" loading="lazy"><div><b>Space Patty</b><span>157K follower</span></div></div>
+      <div class="cl"><img src="assets/clienti/logo-cuccioli.png" alt="Logo Cuccioli che Passione" loading="lazy"><div><b>Cuccioli che Passione</b><span>30,6K follower</span></div></div>
+      <div class="cl"><img src="assets/clienti/logo-megu.png" alt="Logo Megu" loading="lazy"><div><b>Megu</b><span>10,9K follower</span></div></div>
+      <div class="cl"><img src="assets/clienti/logo-corman.png" alt="Logo Cormano Milano 1991" loading="lazy"><div><b>Cormano Milano 1991</b><span>9.514 follower</span></div></div>
+      <div class="cl"><img src="assets/clienti/logo-sushiclub.png" alt="Logo Sushi Club" loading="lazy"><div><b>Sushi Club</b><span>2.790 follower</span></div></div>
+    </div>
+    <p class="fonte-dati">Dati letti dai profili Instagram pubblici il 27 ottobre 2026</p>
+  </div>
+</section>
+
 <section class="programma" id="programma">
   <div class="wrap">
     <span class="kicker">Cosa c'è dentro</span>
@@ -357,7 +399,7 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
     </div>
     <div class="extra">
       <div class="box"><h3>Bonus · Parola a Mickel</h3><ul><li>Come ho fatto il mio video da 8 milioni di visualizzazioni</li><li>Dopo il montaggio: CTA, engagement e insight</li></ul></div>
-      <div class="box"><h3>E in più</h3><span class="chip">PDF dei suoni da cercare su CapCut</span><span class="chip">CapCut gratis o Pro: quando conviene</span><span class="chip">Se monti per i clienti</span><span class="chip">Aggiornamenti quando CapCut cambia</span></div>
+      <div class="box"><h3>E in più</h3><span class="chip">PDF dei suoni da cercare su CapCut</span><span class="chip">CapCut gratis o Pro: quando conviene</span><span class="chip">Aggiornamenti quando CapCut cambia</span></div>
     </div>
   </div>
 </section>
@@ -435,12 +477,12 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
       <div class="prezzo">
         <span class="etich">Solo il corso</span>
         <h3>Il corso CapCut di Mickel</h3>
-        <div class="cifra">97€</div>
+        <div class="cifra" id="cifracorso">97€</div>
         <div class="sotto">una volta sola, tuo per sempre</div>
         <ul>
           <li>15 lezioni, da telefono e da PC</li>
           <li>Le lezioni bonus di Mickel</li>
-          <li>PDF dei suoni, CapCut gratis o Pro, Se monti per i clienti</li>
+          <li>PDF dei suoni e CapCut gratis o Pro</li>
           <li>Gli aggiornamenti quando CapCut cambia</li>
           <li>Accesso su Unlike Academy, da app o da browser</li>
         </ul>
@@ -463,7 +505,10 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
         <a class="btn primario js-allaccess" href="https://club.unlikeacademy.it/checkout/all-access-mickel" data-checkout="ALLACCESS">Entra con l'All-Access</a>
       </div>
     </div>
-    <div class="bonus-lancio" id="bonuslancio"><b>Bonus di lancio:</b> chi entra entro domenica 1 novembre, con il corso o con l'All-Access, viene alla live di gruppo riservata con Mickel di giovedì 5 novembre</div>
+    <div class="bonus-lancio" id="offertalive">
+      <div data-fase="prima"><b>Solo nella live di giovedì 29 ottobre, dalle 20:00 a mezzanotte:</b> -20% sul corso, da 97€ a 77,60€, e con l'All-Access una mini consulenza con Mickel: check-up del tuo montaggio con consigli personalizzati</div>
+      <div data-fase="durante" hidden><b>Solo stasera, fino a mezzanotte:</b> -20% sul corso, da 97€ a 77,60€, già applicato dal bottone. Con l'All-Access, in più una mini consulenza con Mickel: check-up del tuo montaggio con consigli personalizzati</div>
+    </div>
   </div>
 </section>
 
@@ -524,7 +569,10 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
 var CHECKOUT_CORSO = "https://club.unlikeacademy.it/checkout/corso-capcut-mickel";
 // All-Access dalla landing di Mickel (paywall 183571): solo chi entra da qui ha il corso di Mickel a vita e l'etichetta da-landing-mickel
 var CHECKOUT_ALLACCESS = "https://club.unlikeacademy.it/checkout/all-access-mickel";
-var FINE_BONUS = new Date("2026-11-01T23:59:59+01:00");
+// offerta della live del 29/10: inizia alle 20:00 italiane, finisce a mezzanotte (il codice su Circle ha la stessa finestra)
+var INIZIO_LIVE = new Date("2026-10-29T20:00:00+01:00");
+var FINE_LIVE = new Date("2026-10-30T00:00:00+01:00");
+var COUPON_LIVE = "LIVECAPCUT20";
 
 // i parametri del link della landing (es. il codice affiliato di Mickel) passano ai bottoni di pagamento
 function conParametri(url){
@@ -549,10 +597,23 @@ document.querySelectorAll('[data-checkout="ALLACCESS"]').forEach(function(a){ a.
   ["header.hero", "#prezzi", "section.finale"].forEach(function(q){ var el = document.querySelector(q); if(el){ if(!el.id) el.id = q.indexOf("hero")>-1 ? "hero" : "finale"; io.observe(el); } });
 })();
 
-// il bonus di lancio sparisce da solo dopo domenica 1/11
-if(new Date() > FINE_BONUS){
-  ["bonusbar","bonuslancio"].forEach(function(id){ var el = document.getElementById(id); if(el) el.remove(); });
-}
+// l'offerta della live: prima è un invito, durante lo sconto è già nel bottone, dopo mezzanotte sparisce
+(function(){
+  var ora = new Date();
+  var fase = ora < INIZIO_LIVE ? "prima" : (ora < FINE_LIVE ? "durante" : "dopo");
+  if(fase === "dopo"){
+    ["bonusbar","offertalive"].forEach(function(id){ var el = document.getElementById(id); if(el) el.remove(); });
+    return;
+  }
+  document.querySelectorAll("[data-fase]").forEach(function(el){ el.hidden = el.getAttribute("data-fase") !== fase; });
+  if(fase === "durante"){
+    var c = document.getElementById("cifracorso");
+    if(c) c.innerHTML = "<s>97€</s> 77,60€";
+    document.querySelectorAll('[data-checkout="CORSO"]').forEach(function(a){
+      if(CHECKOUT_CORSO){ a.href = conParametri(CHECKOUT_CORSO + "?coupon_code=" + COUPON_LIVE); }
+    });
+  }
+})();
 </script>
 <div class="ckb" id="ckb" role="dialog" aria-label="Preferenze cookie" hidden>
   <p>Usiamo i cookie di Meta per capire quali annunci ti hanno fatto arrivare qui. Li attiviamo solo se accetti · <a href="https://www.iubenda.com/privacy-policy/15204920/cookie-policy" target="_blank" rel="noopener">Cookie policy</a></p>
