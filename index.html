@@ -569,6 +569,11 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
 // ===== DA COMPILARE =====
 // link di pagamento del corso singolo da 97€: si crea su Circle (pagamento + gruppo "Corso CapCut Mickel")
 var CHECKOUT_CORSO = "https://club.unlikeacademy.it/checkout/corso-capcut-mickel";
+// il link in bio di Mickel è questa pagina con ?da=mickel: il corso va sulla pagina di pagamento «dal link di Mickel», così in Circle si vede quali vendite arrivano da lui
+var CHECKOUT_CORSO_MICKEL = "https://club.unlikeacademy.it/checkout/corso-capcut-da-mickel";
+var DA_MICKEL = false;
+try { DA_MICKEL = new URLSearchParams(window.location.search).get("da") === "mickel"; } catch(e) {}
+var CHECKOUT_CORSO_ATTIVO = DA_MICKEL ? CHECKOUT_CORSO_MICKEL : CHECKOUT_CORSO;
 // All-Access dalla landing di Mickel (paywall 183571): solo chi entra da qui ha il corso di Mickel a vita e l'etichetta da-landing-mickel
 var CHECKOUT_ALLACCESS = "https://club.unlikeacademy.it/checkout/all-access-mickel";
 // offerta della live del 29/10: inizia alle 20:00 italiane, finisce a mezzanotte (il codice su Circle ha la stessa finestra)
@@ -585,7 +590,7 @@ function conParametri(url){
   return url + (url.indexOf("?") > -1 ? "&" : "?") + q;
 }
 document.querySelectorAll('[data-checkout="CORSO"]').forEach(function(a){
-  if(CHECKOUT_CORSO){ a.href = conParametri(CHECKOUT_CORSO); } else { a.classList.add("manca"); a.href = "#prezzi"; }
+  if(CHECKOUT_CORSO_ATTIVO){ a.href = conParametri(CHECKOUT_CORSO_ATTIVO); } else { a.classList.add("manca"); a.href = "#prezzi"; }
 });
 document.querySelectorAll('[data-checkout="ALLACCESS"]').forEach(function(a){ a.href = conParametri(CHECKOUT_ALLACCESS); });
 
@@ -614,7 +619,7 @@ document.querySelectorAll('[data-checkout="ALLACCESS"]').forEach(function(a){ a.
     var c = document.getElementById("cifracorso");
     if(c) c.innerHTML = "<s>97€</s> 77,60€";
     document.querySelectorAll('[data-checkout="CORSO"]').forEach(function(a){
-      if(CHECKOUT_CORSO){ a.href = conParametri(CHECKOUT_CORSO + "?coupon_code=" + COUPON_LIVE); }
+      if(CHECKOUT_CORSO_ATTIVO){ a.href = conParametri(CHECKOUT_CORSO_ATTIVO + "?coupon_code=" + COUPON_LIVE); }
     });
   }
 })();
