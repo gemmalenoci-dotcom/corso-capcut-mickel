@@ -131,6 +131,9 @@ p.lead{font-size:20px;color:var(--grigio);max-width:720px}
 .bonus-lancio{margin-top:22px;border-radius:22px;padding:20px 24px;background:rgba(79,209,197,.08);border:1px solid rgba(79,209,197,.4);color:#DDF7F4}
 
 /* testimonianze */
+.tes{margin:0;border-radius:var(--r);overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;align-self:start}
+.tes img{display:block;width:100%;height:auto}
+.tes figcaption{padding:12px 16px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tiffany);font-weight:700}
 .test{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
 
 /* faq */
@@ -210,7 +213,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
   .box h3{font-size:18px}
   /* prima e dopo, testimonianze */
   .pd.scorre > *{flex-basis:62%;aspect-ratio:9/16;min-height:0}
-  .test.scorre > *{min-height:170px}
+  .test.scorre > *{min-height:0}
   /* prezzi */
   .prezzi{gap:16px;margin-top:24px}
   .prezzo{padding:26px 22px;border-radius:22px}
@@ -513,19 +516,17 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
   </div>
 </section>
 
-<!-- TESTIMONIANZE: si rimettono quando Mickel le manda, con il consenso
 <section>
   <div class="wrap">
-    <span class="kicker">Chi l'ha già fatto</span>
+    <span class="kicker">Chi ha imparato con lui</span>
     <h2 class="display">Le parole <span class="tiffany">di chi monta con Mickel</span></h2>
     <div class="test scorre">
-      <div class="slot"><b>Testimonianza 1 · da Mickel</b><span>Screenshot o video di chi ha fatto il suo corso o ha lavorato con lui, con il consenso a pubblicarlo</span></div>
-      <div class="slot"><b>Testimonianza 2 · da Mickel</b><span>Meglio con un risultato concreto: un video, un numero, un cliente</span></div>
-      <div class="slot"><b>Testimonianza 3 · da Mickel</b><span>Anche un messaggio in DM va bene, così com'è</span></div>
+      <figure class="tes"><img src="assets/testimonianze/alessio.jpg" alt="Messaggio di Alessio su Mickel" loading="lazy"><figcaption>Alessio · lavora con Mickel</figcaption></figure>
+      <figure class="tes"><img src="assets/testimonianze/silvia.jpg" alt="Messaggio di Silvia su Mickel" loading="lazy"><figcaption>Silvia · formata da Mickel</figcaption></figure>
+      <figure class="tes"><img src="assets/testimonianze/tommy.jpg" alt="Messaggio di Tommy su Mickel" loading="lazy"><figcaption>Tommy · regista e montatore</figcaption></figure>
     </div>
   </div>
 </section>
--->
 
 <section class="faq">
   <div class="wrap">
