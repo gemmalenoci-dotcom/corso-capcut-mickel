@@ -710,6 +710,14 @@ document.querySelectorAll('[data-checkout="ALLACCESS"]').forEach(function(a){ a.
     agg(); setTimeout(agg, 700); window.addEventListener("load", agg);
   });
 })();
+
+// se la landing è dentro la pagina di blocco del corso su Circle, i link esterni (pagamento, termini) si aprono a tutta pagina e non dentro la cornice
+(function(){
+  var dentro = false;
+  try { dentro = window.top !== window.self; } catch(e) { dentro = true; }
+  if(!dentro) return;
+  document.querySelectorAll('a[href^="http"]').forEach(function(a){ if(a.hostname !== window.location.hostname){ a.target = "_top"; } });
+})();
 </script>
 <div class="ckb" id="ckb" role="dialog" aria-label="Preferenze cookie" hidden>
   <p>Usiamo i cookie di Meta per capire quali annunci ti hanno fatto arrivare qui. Li attiviamo solo se accetti · <a href="https://www.iubenda.com/privacy-policy/15204920/cookie-policy" target="_blank" rel="noopener">Cookie policy</a></p>
