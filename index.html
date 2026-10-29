@@ -4,7 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Da clip grezza a video professionale · il corso CapCut di Mickel</title>
-<meta name="description" content="Il corso CapCut di Mickel Buratin: impari a montare da telefono o da PC video che la gente guarda fino alla fine. Dentro Unlike Academy">
+<meta name="description" content="Il corso CapCut di Mickel Buratin: 13 lezioni da telefono e da PC più 4 bonus per montare video che la gente guarda fino alla fine. Su Unlike Academy">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://capcut.unlikeacademy.it/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Unlike Academy">
+<meta property="og:locale" content="it_IT">
+<meta property="og:url" content="https://capcut.unlikeacademy.it/">
+<meta property="og:title" content="Da clip grezza a video professionale · il corso CapCut di Mickel Buratin">
+<meta property="og:description" content="13 lezioni da telefono e da PC più 4 bonus per montare video che la gente guarda fino alla fine, con Mickel Buratin. Su Unlike Academy">
+<meta property="og:image" content="https://capcut.unlikeacademy.it/assets/og-corso-capcut.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Corso CapCut con Mickel Buratin: da clip grezza a video professionale, 13 lezioni e 4 bonus">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Da clip grezza a video professionale · il corso CapCut di Mickel Buratin">
+<meta name="twitter:description" content="13 lezioni da telefono e da PC più 4 bonus per montare video che la gente guarda fino alla fine">
+<meta name="twitter:image" content="https://capcut.unlikeacademy.it/assets/og-corso-capcut.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Corso CapCut con Mickel Buratin","description":"Da clip grezza a video professionale: 13 lezioni da telefono e da PC più 4 bonus, dalle basi all'effetto clone","inLanguage":"it","provider":{"@type":"Organization","name":"Unlike Academy","sameAs":"https://unlikeacademy.it"},"instructor":{"@type":"Person","name":"Mickel Buratin"},"image":"https://capcut.unlikeacademy.it/assets/og-corso-capcut.jpg","offers":{"@type":"Offer","price":"97","priceCurrency":"EUR","url":"https://capcut.unlikeacademy.it/"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -288,12 +305,44 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
 .cl span{display:block;font-size:13px;color:var(--grigio)}
 .fonte-dati{font-size:12.5px;color:var(--grigio);margin-top:22px;opacity:.8}
 @media (max-width:900px){.lavori .reels{display:flex;overflow-x:auto;gap:12px;padding-bottom:8px;scroll-snap-type:x mandatory}.lavori .reel{flex:0 0 220px;scroll-snap-align:start}}
+
+/* 29/10: frecce sulle schede che scorrono di lato, urgenza dello sconto, consulenza in evidenza */
+.sc-wrap{position:relative}
+.sc-btn{display:none}
+@keyframes spinta{0%,100%{transform:translateY(-50%) translateX(0)}50%{transform:translateY(-50%) translateX(7px)}}
+@keyframes pulsa{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+@media (max-width:900px){
+  .sc-btn{display:flex;position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:2px solid #fff;background:var(--fucsia);color:#fff;font:800 22px/1 Inter,sans-serif;
+    align-items:center;justify-content:center;z-index:5;cursor:pointer;padding:0;box-shadow:0 10px 24px -6px rgba(230,20,140,.9)}
+  .sc-btn.dx{right:-12px;animation:spinta 1.4s ease-in-out infinite}
+  .sc-btn.sx{left:-12px}
+}
+.bonusbar{position:sticky;top:0;z-index:70}
+.bonusbar .pt{display:inline-block;width:9px;height:9px;border-radius:50%;background:#fff;margin-right:8px;animation:pulsa 1.2s ease-in-out infinite;vertical-align:middle}
+.bonusbar .cd{font-variant-numeric:tabular-nums;background:rgba(0,0,0,.28);border-radius:8px;padding:2px 8px;margin-left:6px;white-space:nowrap}
+.prezzo .tag-live{display:inline-block;background:var(--fucsia);color:#fff;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:6px 12px;margin:0 0 10px}
+.prezzo .tag-live .cd{font-variant-numeric:tabular-nums}
+.prezzo li.evid{background:rgba(79,209,197,.12);border:1px solid rgba(79,209,197,.55);border-radius:14px;padding:12px 14px 12px 40px;margin:6px 0;font-weight:700}
+.prezzo li.evid::before{left:14px;top:20px}
+.prezzo li.evid small{display:block;font-weight:500;color:var(--grigio);font-size:13.5px;margin-top:2px}
+.prezzo li.regalo{background:linear-gradient(135deg,rgba(230,20,140,.22),rgba(123,63,242,.22));border-color:rgba(230,20,140,.7)}
+.bonus-lancio{border-color:var(--fucsia);background:linear-gradient(135deg,rgba(230,20,140,.16),rgba(123,63,242,.16));font-size:19px;color:#fff}
+.bonus-lancio .cd-grande{display:block;font-family:Anton,sans-serif;font-size:44px;line-height:1.1;letter-spacing:.02em;margin-top:8px;color:var(--tiffany);font-variant-numeric:tabular-nums}
+.dentro .box.evid{border:2px solid var(--tiffany);background:rgba(79,209,197,.1)}
+.dentro .box.regalo{grid-column:1/-1;border:2px solid var(--fucsia);background:linear-gradient(135deg,rgba(230,20,140,.2),rgba(123,63,242,.2))}
+.dentro .box.regalo h3{color:#fff}
+.dentro .box.regalo p{color:#F1DDF0}
+@media (max-width:700px){
+  .bonusbar{font-size:13px;padding:8px 10px}
+  .bonus-lancio{font-size:16px}
+  .bonus-lancio .cd-grande{font-size:36px}
+}
 </style>
 </head>
 <body>
 
 <!-- banner dell'offerta della live: prima della live è un invito, durante la live porta allo sconto, dopo mezzanotte del 29/10 sparisce -->
-<div class="bonusbar" id="bonusbar"><span data-fase="prima"><span class="solo-desk">Giovedì 29 ottobre alle 20, solo in live: </span><span class="solo-mob">Giovedì 29, in live: </span><a href="https://club.unlikeacademy.it/c/dirette/video-belli-che-nessuno-guarda-il-problema-non-e-capcut">-20% sul corso fino a mezzanotte</a></span><span data-fase="durante" hidden><span class="solo-desk">Solo stasera, fino a mezzanotte: </span><span class="solo-mob">Fino a mezzanotte: </span><a href="#prezzi">-20% sul corso, da 97€ a 77,60€</a></span></div>
+<div class="bonusbar" id="bonusbar"><span data-fase="prima"><span class="solo-desk">Giovedì 29 ottobre alle 20, solo in live: </span><span class="solo-mob">Giovedì 29, in live: </span><a href="https://club.unlikeacademy.it/c/dirette/video-belli-che-nessuno-guarda-il-problema-non-e-capcut">-20% sul corso fino a mezzanotte</a></span><span data-fase="durante" hidden><span class="pt"></span><span class="solo-desk">Solo stasera, fino a mezzanotte: </span><span class="solo-mob">Fino a mezzanotte: </span><a href="#prezzi">-20% sul corso, da 97€ a 77,60€</a><span class="cd" data-countdown>--:--:--</span></span></div>
 
 <header class="hero">
   <div class="wrap">
@@ -451,7 +500,8 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
       <div class="foto"><img src="assets/gemma.jpg" alt="Gemma Lenoci" loading="lazy"><b>Gemma Lenoci<span>founder di Unlike Academy</span></b></div>
       <div>
         <div class="dentro">
-          <div class="box"><h3>Il corso CapCut di Mickel</h3><p>Completo, e resta tuo per sempre</p></div>
+          <div class="box evid"><h3>Il corso CapCut di Mickel</h3><p>Completo, e resta tuo per sempre se entri da questa pagina, anche se un giorno disdici l'abbonamento</p></div>
+          <div class="box regalo" data-live><h3 data-fase="prima">In regalo per chi entra in live: 1 ora di consulenza con Mickel</h3><h3 data-fase="durante" hidden>In regalo solo fino a mezzanotte: 1 ora di consulenza con Mickel</h3><p>Se prendi l'All-Access da questa pagina durante la live di giovedì 29 ottobre (dalle 20:00 a mezzanotte), Mickel guarda il tuo montaggio e ti dà consigli su misura, in una consulenza personalizzata di un'ora, inclusa e gratuita</p></div>
           <div class="box"><h3>Tutti i videocorsi</h3><p>Dal metodo al piano editoriale, poi funnel, Instagram, Stories-Telling e TikTok</p></div>
           <div class="box"><h3>Corso AI per i social</h3><p>L'intelligenza artificiale come acceleratore, con aggiornamenti ogni mese</p></div>
           <div class="box"><h3>Piano editoriale del mese</h3><p>Con esempi per nicchia, per sapere sempre cosa pubblicare</p></div>
@@ -473,6 +523,7 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
       <div class="prezzo">
         <span class="etich">Solo il corso</span>
         <h3>Il corso CapCut di Mickel</h3>
+        <div class="tag-live" data-fase="durante" hidden>-20% solo stasera · finisce tra <span class="cd" data-countdown>--:--:--</span></div>
         <div class="cifra" id="cifracorso">97€</div>
         <div class="sotto">una volta sola, tuo per sempre</div>
         <ul>
@@ -490,7 +541,8 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
         <div class="cifra">229€</div>
         <div class="sotto">ogni 3 mesi, oppure 790€ l'anno</div>
         <ul>
-          <li>Il corso CapCut di Mickel, tuo per sempre se entri da questa pagina</li>
+          <li class="evid">Il corso CapCut di Mickel è tuo per sempre<small>solo se entri da questa pagina: anche se un giorno disdici l'abbonamento, il corso resta tuo</small></li>
+          <li class="evid regalo" data-live><span data-fase="prima">In regalo per chi entra in live giovedì 29 ottobre: una consulenza personalizzata di 1 ora con Mickel</span><span data-fase="durante" hidden>In regalo solo fino a mezzanotte: una consulenza personalizzata di 1 ora con Mickel</span><small>Mickel guarda il tuo montaggio e ti dà consigli su misura · inclusa e gratuita</small></li>
           <li>Tutti i videocorsi: metodo, piano editoriale, funnel, Instagram, Storie e TikTok</li>
           <li>Corso AI per i social</li>
           <li>Stratego, la piattaforma che abbiamo creato noi: 1 account incluso</li>
@@ -502,7 +554,7 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
     </div>
     <div class="bonus-lancio" id="offertalive">
       <div data-fase="prima"><b>Solo nella live di giovedì 29 ottobre, dalle 20:00 a mezzanotte:</b> -20% sul corso, da 97€ a 77,60€, e con l'All-Access una consulenza personalizzata di un'ora con Mickel: check-up del tuo montaggio con consigli su misura</div>
-      <div data-fase="durante" hidden><b>Solo stasera, fino a mezzanotte:</b> -20% sul corso, da 97€ a 77,60€, già applicato dal bottone. Con l'All-Access, in più una consulenza personalizzata di un'ora con Mickel: check-up del tuo montaggio con consigli su misura</div>
+      <div data-fase="durante" hidden><b>Solo stasera, fino a mezzanotte:</b> -20% sul corso, da 97€ a 77,60€, già applicato dal bottone. Con l'All-Access, in più una consulenza personalizzata di un'ora con Mickel: check-up del tuo montaggio con consigli su misura<span class="cd-grande" data-countdown>--:--:--</span></div>
     </div>
   </div>
 </section>
@@ -552,8 +604,8 @@ footer .legal button{font:inherit;color:var(--grigio);background:none;border:0;p
 </footer>
 
 <div class="barra-mob" id="barra">
-  <div><b>Il corso di Mickel</b><span>da 97€ · telefono e PC</span></div>
-  <a class="btn primario" href="#prezzi">Scegli</a>
+  <div><b id="barra-t">Il corso di Mickel</b><span id="barra-s">da 97€ · telefono e PC</span></div>
+  <a class="btn primario" id="barra-a" href="#prezzi">Scegli</a>
 </div>
 
 <script>
@@ -576,7 +628,7 @@ var OFFERTA_LIVE_ATTIVA = true;
 
 // i parametri del link della landing (es. il codice affiliato di Mickel) passano ai bottoni di pagamento
 function conParametri(url){
-  var q = window.location.search.replace(/^\?/, "");
+  var q = window.location.search.replace(/^\?/, "").split("&").filter(function(p){ return p && p.indexOf("anteprima=") !== 0; }).join("&");
   if(!q) return url;
   return url + (url.indexOf("?") > -1 ? "&" : "?") + q;
 }
@@ -598,21 +650,65 @@ document.querySelectorAll('[data-checkout="ALLACCESS"]').forEach(function(a){ a.
 })();
 
 // l'offerta della live: prima è un invito, durante lo sconto è già nel bottone, dopo mezzanotte sparisce
+// ?anteprima=prima, durante o dopo mostra la pagina com'è in quella fase (serve per controllarla in anticipo: il codice vero funziona solo dalle 20:00 a mezzanotte)
 (function(){
   var ora = new Date();
   var fase = ora < INIZIO_LIVE ? "prima" : (ora < FINE_LIVE ? "durante" : "dopo");
+  var forzata = "";
+  try { forzata = new URLSearchParams(window.location.search).get("anteprima") || ""; } catch(e) {}
+  if(forzata === "prima" || forzata === "durante" || forzata === "dopo"){ fase = forzata; }
   if(!OFFERTA_LIVE_ATTIVA || fase === "dopo"){
-    ["bonusbar","offertalive"].forEach(function(id){ var el = document.getElementById(id); if(el) el.remove(); });
+    // dopo mezzanotte sparisce tutto ciò che è legato alla live: banner, riquadro, sconto, consulenza in regalo
+    document.querySelectorAll("#bonusbar,#offertalive,[data-live],[data-fase]").forEach(function(el){ el.remove(); });
     return;
   }
   document.querySelectorAll("[data-fase]").forEach(function(el){ el.hidden = el.getAttribute("data-fase") !== fase; });
   if(fase === "durante"){
     var c = document.getElementById("cifracorso");
     if(c) c.innerHTML = "<s>97€</s> 77,60€";
-    document.querySelectorAll('[data-checkout="CORSO"]').forEach(function(a){
-      if(CHECKOUT_CORSO_ATTIVO){ a.href = conParametri(CHECKOUT_CORSO_ATTIVO + "?coupon_code=" + COUPON_LIVE); }
+    var linkSconto = CHECKOUT_CORSO_ATTIVO ? conParametri(CHECKOUT_CORSO_ATTIVO + "?coupon_code=" + COUPON_LIVE) : "";
+    document.querySelectorAll('[data-checkout="CORSO"]').forEach(function(a){ if(linkSconto){ a.href = linkSconto; } });
+    // i bottoni del corso in alto e in fondo portano direttamente al pagamento con lo sconto già applicato
+    document.querySelectorAll(".js-corso").forEach(function(a){
+      if(!linkSconto || a.hasAttribute("data-checkout")) return;
+      a.href = linkSconto; a.innerHTML = "Prendi il corso · <s style=\"opacity:.7\">97€</s> 77,60€";
     });
+    var bt = document.getElementById("barra-t"), bs = document.getElementById("barra-s"), ba = document.getElementById("barra-a");
+    if(bt) bt.textContent = "-20% fino a mezzanotte";
+    if(bs) bs.innerHTML = "mancano <span data-countdown>--:--:--</span>";
+    if(ba && linkSconto){ ba.href = linkSconto; ba.textContent = "Prendi il corso"; }
+    // conto alla rovescia fino a mezzanotte
+    function due(n){ return (n < 10 ? "0" : "") + n; }
+    function tic(){
+      var ms = FINE_LIVE - new Date(); if(ms < 0) ms = 0;
+      var s = Math.floor(ms / 1000), t = due(Math.floor(s / 3600)) + ":" + due(Math.floor((s % 3600) / 60)) + ":" + due(s % 60);
+      document.querySelectorAll("[data-countdown]").forEach(function(el){ el.textContent = t; });
+      if(ms <= 0 && !forzata){ window.location.reload(); }
+    }
+    tic(); setInterval(tic, 1000);
   }
+})();
+
+// frecce sulle schede che scorrono di lato (telefono): fanno capire che si può girare a destra con il dito
+(function(){
+  document.querySelectorAll(".scorre, .lavori .reels").forEach(function(sc){
+    var w = document.createElement("div"); w.className = "sc-wrap";
+    sc.parentNode.insertBefore(w, sc); w.appendChild(sc);
+    function crea(dir){
+      var b = document.createElement("button"); b.type = "button"; b.className = "sc-btn " + (dir > 0 ? "dx" : "sx");
+      b.setAttribute("aria-label", dir > 0 ? "Scorri avanti" : "Scorri indietro"); b.innerHTML = dir > 0 ? "&rarr;" : "&larr;";
+      b.addEventListener("click", function(){ sc.scrollBy({left: dir * Math.max(240, sc.clientWidth * 0.8), behavior: "smooth"}); });
+      w.appendChild(b); return b;
+    }
+    var sx = crea(-1), dx = crea(1);
+    function agg(){
+      var puo = sc.scrollWidth > sc.clientWidth + 12;
+      sx.hidden = !puo || sc.scrollLeft < 8;
+      dx.hidden = !puo || sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 8;
+    }
+    sc.addEventListener("scroll", agg, {passive: true}); window.addEventListener("resize", agg);
+    agg(); setTimeout(agg, 700); window.addEventListener("load", agg);
+  });
 })();
 </script>
 <div class="ckb" id="ckb" role="dialog" aria-label="Preferenze cookie" hidden>
